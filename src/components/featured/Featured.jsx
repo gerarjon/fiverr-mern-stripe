@@ -6,10 +6,10 @@ const Featured = () => {
     <div className='featured'>
       <div className="container">
         <div className="left">
-          <h1>Find the perfect freelance services for you business</h1>
+          <h1>Find the perfect <i>freelance</i> services for you business</h1>
           <div className="search">
             <div className="searchInput">
-              <img src="" alt="" />
+              <img src="./img/search.png" alt="" />
               <input type="text" placeholder='Try "building mobile app"' name="" id="" />
             </div>
             <button>Search</button>
@@ -22,7 +22,9 @@ const Featured = () => {
             <button>AI Services</button>
           </div>
         </div>
-        <div className="right"></div>
+        <div className="right">
+          <img src='./img/man.png' alt='' />
+        </div>
       </div>
     </div>
   )
