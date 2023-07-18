@@ -1,10 +1,12 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import "./Home.scss"
 import Featured from '../../components/featured/Featured'
 import TrustedBy from '../../components/trustedBy/TrustedBy'
 import Slide from '../../components/slide/Slide'
-import { cards } from '../../data';
+import { cards, projects } from '../../data';
 import CatCard from '../../components/catCard/CatCard'
+import ProjectCard from '../../components/projectCard/ProjectCard'
 
 const Home = () => {
   return (
@@ -16,7 +18,9 @@ const Home = () => {
           <CatCard key={card.id} item={card} />
         ))}
       </Slide>
+      
 
+      {/* Features 1 */}
       <div className="features">
         <div className="container">
           <div className="item">
@@ -59,7 +63,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-
+      
+      {/* Explore */}
       <div className="explore">
         <div className="container">
           <h1>You need it, we've got it</h1>
@@ -148,7 +153,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+      
 
+      {/* Features  2 */}
       <div className="features dark">
         <div className="container">
           <div className="item">
@@ -186,6 +193,13 @@ const Home = () => {
           </div>
         </div>
       </div>
+      
+      {/* Product Slider */}
+      <Slide slidesToShow={4} arrowsScroll={4}>
+        {projects.map(project=> (
+          <ProjectCard key={project.id} item={project} />
+        ))}
+      </Slide>
     </div>
   )
 }
