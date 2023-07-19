@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './MyGigs.scss'
 
 const MyGigs = () => {
-  
+
   const currentUser = {
     id: 1,
     username: "Anna",
