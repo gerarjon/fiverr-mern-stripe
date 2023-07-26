@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import userRoute from './routes/api/user.route.js'
 
 dotenv.config();
 const PORT = process.env.PORT || 3001;
@@ -16,6 +17,11 @@ const connect = async () => {
         console.log(error)
     }
 }
+
+
+// Routes
+import routes from './routes';
+app.use(routes);
 
 app.listen(PORT, () => {
     connect();
